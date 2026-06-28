@@ -1,9 +1,7 @@
-
-
-function getFirstElement<T>(arr: T[]) {
+function getFirstElement<T>(arr: T[]): T {
   return arr[0];
 }
 
-const number = getFirstElement([1, 2, 3]);           // 1
-const string = getFirstElement(["a", "b", "c"]);     // "a"
-const boolean = getFirstElement([true, false, true]); // true
+const number = getFirstElement<number>([1, 2, 3]);           // 1
+const string = getFirstElement<string>(["a", "b", "c"]);     // "a"
+const boolean = getFirstElement<boolean>([true, false, true]); // true
